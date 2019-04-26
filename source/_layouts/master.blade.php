@@ -36,9 +36,8 @@
     </article>
 
     <footer>
-        <small>
-            This project is maintained by <a href="https://raniesantos.netlify.com">Ranie Santos</a>.
-            View the <a href="https://github.com/raniesantos/artisan-static">GitHub repo</a>.
+        <small>            
+            View the <a href="https://github.com/typescriptstudies/artisan-static">GitHub repo</a>.
         </small>
     </footer>
 

@@ -5,13 +5,13 @@ return [
     'baseUrl' => 'https://artisan-static-demo.netlify.com',
     'site' => [
         'title' => 'lishadowapps blog',
-        'description' => 'Personal blog of John Doe.',
+        'description' => 'Personal blog of lishadowapps.',
         'image' => 'default-share.png',
     ],
     'owner' => [
-        'name' => 'John Doe',
+        'name' => 'lishadowapps',
         'twitter' => 'johndoe',
-        'github' => 'johndoe',
+        'github' => 'typescriptstudies',
     ],
     'services' => [
         'analytics' => 'UA-XXXXX-Y',
