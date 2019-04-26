@@ -15,6 +15,7 @@
     @include('_partials.cms.identity_widget')
 
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css', 'assets/build') }}">
 </head>
 <body>
     <header>
@@ -37,7 +38,7 @@
 
     <footer>
         <small>            
-            View the <a href="https://github.com/typescriptstudies/artisan-static" target="_blank" rel="noopener noreferrer">>GitHub repo</a>.
+            View the <a href="https://github.com/typescriptstudies/artisan-static" target="_blank" rel="noopener noreferrer">GitHub repo</a>.
         </small>
     </footer>
 
