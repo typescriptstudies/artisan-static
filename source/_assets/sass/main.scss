@@ -1,0 +1,42 @@
+// Tacit - CSS Framework for Dummies, Without Classes
+@import url('https://unpkg.com/tacit-css@1.3.6/dist/tacit-css-1.3.6.min.css');
+
+@import "~highlight.js/styles/atom-one-dark";
+
+button[data-sharer] {
+    color: #fff;
+}
+
+header {
+    background-color: #cfc;
+    border: solid 1px #777;
+    border-radius: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+
+article {
+    background-color: #cff;
+    border: solid 1px #777;
+    border-radius: 20px;
+    padding: 0px;    
+    margin: 0px;
+}
+
+section {
+    padding: 10px;
+    padding-left: 40px;
+    margin: 0px;
+    margin-top: -50px;
+}
+
+.maintitle {
+    font-size: 25px;
+}
+
+.test-css {
+    padding: 5px;
+    border: 2px solid blue;
+}
