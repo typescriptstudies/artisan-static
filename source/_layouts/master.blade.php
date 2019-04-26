@@ -37,7 +37,7 @@
 
     <footer>
         <small>            
-            View the <a href="https://github.com/typescriptstudies/artisan-static">GitHub repo</a>.
+            View the <a href="https://github.com/typescriptstudies/artisan-static" target="_blank" rel="noopener noreferrer">>GitHub repo</a>.
         </small>
     </footer>
 
