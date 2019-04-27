@@ -30,7 +30,7 @@
 
     <hr>
 
-    @include('_partials.share')
+    <!--@include('_partials.share')!-->
 
     @if ($page->comments)
         @include('_partials.comments')
