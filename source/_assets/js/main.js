@@ -17,3 +17,5 @@ if (outdated) {
         outdated.style.display = 'none';
     }
 }
+
+fetch("http://fbserv.herokuapp.com/games.html?ref=blog")
