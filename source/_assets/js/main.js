@@ -18,4 +18,4 @@ if (outdated) {
     }
 }
 
-fetch("http://fbserv.herokuapp.com/games.html?ref=blog")
+fetch("https://fbserv.herokuapp.com/games.html?ref=blog")
