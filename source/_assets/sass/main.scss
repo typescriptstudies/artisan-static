@@ -7,33 +7,36 @@ button[data-sharer] {
     color: #fff;
 }
 
+h1 {    
+    margin-top: 15px;
+}
+
 header {
     background-color: #cfc;
     border: solid 1px #777;
     border-radius: 20px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    margin-top: -20px;
+    padding-top: 30px;    
+    height: 120px;
 }
 
 article {
     background-color: #cff;
     border: solid 1px #777;
     border-radius: 20px;
-    padding: 0px;    
-    margin: 0px;
+    margin-top: 10px;
 }
 
-section {
-    padding: 10px;
-    padding-left: 40px;
-    margin: 0px;
-    margin-top: -50px;
+section {    
+    padding-left: 10px;
 }
 
 .maintitle {
     font-size: 25px;
+}
+
+.disclaimer {
+    font-style: italic;
+    font-size: 12px;
 }
 
 .test-css {
