@@ -18,4 +18,11 @@ if (outdated) {
     }
 }
 
-fetch("https://fbserv.herokuapp.com/games.html?ref=blog")
+if(!document.location.host.includes("localhost"))
+{
+    console.log("sending log request", document.location.href)
+    fetch("https://fbserv.herokuapp.com/games.html?ref=blog")
+}
+else{
+    console.log("not logging on localhost", document.location.href)
+}
