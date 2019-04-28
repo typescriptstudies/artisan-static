@@ -21,10 +21,10 @@
         <nav>
             <strong><span class="maintitle">{{ $page->site->title }}</span></strong><br>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/posts">Posts</a></li>
+                <li><a class="link" href="/">Home</a></li>
+                <li><a class="link" href="/posts">Posts</a></li>
                 <!--<li><a href="/about">About</a></li>-->
-                <li><a href="/contact">Contact</a></li>
+                <li><a class="link" href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -43,6 +43,6 @@
 
     <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
     @includeWhen($page->production, '_partials.analytics')
-    @include('_partials.cms.identity_redirect')
+    @include('_partials.cms.identity_redirect')    
 </body>
 </html>

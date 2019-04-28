@@ -18,11 +18,22 @@ if (outdated) {
     }
 }
 
-if(!document.location.host.includes("localhost"))
+let loggingdisabled = document.location.href.includes("nolog=true")
+
+if(document.location.host.includes("localhost"))
 {
-    console.log("sending log request", document.location.href)
-    fetch("https://fbserv.herokuapp.com/games.html?ref=blog")
+    console.log("not logging on localhost", document.location.href)
 }
 else{
-    console.log("not logging on localhost", document.location.href)
+    if(loggingdisabled){
+        console.log("logging disabled", document.location.href)        
+    }else{
+        console.log("sending log request", document.location.href)
+        fetch("https://fbserv.herokuapp.com/games.html?ref=blog")
+    }     
+}
+
+for(let node of document.querySelectorAll(".link")){
+    let href = node.href
+    if(loggingdisabled) node.href = href + "?nolog=true"
 }
