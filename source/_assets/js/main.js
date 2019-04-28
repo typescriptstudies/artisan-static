@@ -41,3 +41,10 @@ for(let node of document.querySelectorAll(".link")){
 let dochtml= document.documentElement.innerHTML
 let newdochtml = dochtml.replace(/\$<a href=/g, `<a rel="noopener noreferrer" target="_blank" href=`)
 document.documentElement.innerHTML = newdochtml
+
+setTimeout(function(){
+    try{
+        document.querySelector(".postcontent").style.opacity = 1.0
+    }catch(err){
+    }
+}, 0)

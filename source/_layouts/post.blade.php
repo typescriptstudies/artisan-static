@@ -26,7 +26,9 @@
 
     <p class="disclaimer">DISCLAIMER: Any 3rd-party services in these posts and in the config are only recommendations/suggestions. I am not affiliated with any of them.</p>
 
+    <div class="postcontent">
     @yield('postContent')
+    </div>
 
     <hr>
 
