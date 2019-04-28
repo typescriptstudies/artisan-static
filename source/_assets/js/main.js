@@ -39,7 +39,5 @@ for(let node of document.querySelectorAll(".link")){
 }
 
 let dochtml= document.documentElement.innerHTML
-console.log(dochtml)
 let newdochtml = dochtml.replace(/\$<a href=/g, `<a rel="noopener noreferrer" target="_blank" href=`)
-console.log(newdochtml)
 document.documentElement.innerHTML = newdochtml
