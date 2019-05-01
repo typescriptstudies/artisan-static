@@ -1,5 +1,5 @@
 ---
-title: 'Atomic - Trolling Nf3 f6 d4 - 2.. d6'
+title: 'Atomic - Trolling 1. Nf3 f6 2. d4 - 2.. d6'
 date: 2019-05-01
 comments: false
 ---
