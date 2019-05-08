@@ -5,7 +5,7 @@ comments: false
 ---
 ## $[Pastebin](https://pastebin.com/)
 
-Share conde snippets online.
+Share code snippets online.
 
 ## $[Epoch converter](https://www.epochconverter.com/)
 
