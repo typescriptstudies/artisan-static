@@ -19,6 +19,7 @@ if (outdated) {
 }
 
 let loggingdisabled = document.location.href.includes("nolog=true")
+let hideheader = document.location.href.includes("hideheader=true")
 
 if(document.location.host.includes("localhost"))
 {
@@ -36,6 +37,12 @@ else{
 for(let node of document.querySelectorAll(".link")){
     let href = node.href
     if(loggingdisabled) node.href = href + "?nolog=true"
+}
+
+if(hideheader){
+    for(let node of document.querySelectorAll(".hide")){
+        node.style.display = "none"
+    }
 }
 
 let dochtml= document.documentElement.innerHTML

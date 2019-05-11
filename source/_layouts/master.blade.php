@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">    
 </head>
 <body>
-    <header>
+    <header class="hide">
         <nav>
             <strong><span class="maintitle">{{ $page->site->title }}</span></strong><br>
             <ul>
@@ -35,7 +35,7 @@
         </section>
     </article>
 
-    <footer>
+    <footer class="hide">
         <small>            
             View the <a href="https://github.com/typescriptstudies/artisan-static" target="_blank" rel="noopener noreferrer">GitHub repo</a>.
         </small>

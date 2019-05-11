@@ -49,10 +49,6 @@ You can choose a title by filling in the popup, however a default title is provi
 
 There is always exactly one study selected, shown with a different background in the study list. You can select a study by clicking on its title. Upon creation the newly created study becomes selected. After deleting a study, the Default study becomes selected. All editing always pertains to the selected study.
 
-## Editing the title of a study
-
-To edit a study's title, click on the `Edit Title` button of the study.
-
 ## Cloning a study
 
 To clone a study, click on the `Clone` button of the study.
@@ -61,7 +57,13 @@ To clone a study, click on the `Clone` button of the study.
 
 To delete a study, click on the `Delete` button of the study.
 
-## Editing a study
+# Editing a study
+
+## Editing the title of a study
+
+To edit a study's title, click on the `Edit Title` button of the study.
+
+## Editing the moves of a study
 
 Editing can be done using the controls above the board:
 
