@@ -119,11 +119,22 @@ Download the lichess study chapter as PGN, open the file, copy the PGN to the cl
 
 You can build a training repertoire by assigning training weights to moves. To do this, switch to the "Book" tab. There are two combo boxes for each moves. The first one is the weight with which you are required to make this move. The second one is the weight with which the trainer will play this move against you. Every move originally has both weights set to 0. Moves having weight 0 are ignored during training.
 
+## Start training
+
 To start the training, switch to the "Train" tab and select a training mode from the combo. In case you select 'Train white", the trainer will check your move with white and auto play moves for black, if you select "Train black", the trainer will check your move with black auto play moves for white.
 
 If you make a move that has less than the maximum weight, you will get warned, but you can continue playing. If you make a move with the maximum weight, you will never get warned. This way you can practice a diverse repertoire, but get some negative feedback, if you don't play the best possible move in a given position.
+
+## Stop training
 
 To stop the training, set the combo in the "Train" tab to "Training off".
 
 Always turn off training when you want to edit your repertoire and turn it back on when you have made all your changes.
 
+## Set train root
+
+By default training starts from the starting position of the study. If you want to change this, navigate to the desired position, then in the "Train" tab press "Set train root to current position".
+
+If the train root position is deleted from the study, the starting position becomes the train root again.
+
+The train root is not remembered, you have to set it manually for every session.
