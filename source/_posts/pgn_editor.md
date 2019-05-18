@@ -81,3 +81,49 @@ Editing can be done using the controls above the board:
 
 ![](/assets/screenshots/editstudyflip.PNG) &nbsp;&nbsp;&nbsp;flip board
 
+<a name="setfrompgn"></a>
+
+## Setting up study from PGN
+
+To set up a study from a PGN, copy the PGN to the clipboard, go to the "Game" tab and press "Paste". If you browser does not support auto pasting, then delete everything from the text box, paste the PGN manually and then press "Paste" to initiate parsing.
+
+_Note that setting up the study form a PGN will delete all existing moves._
+
+## Setting up study from FEN
+
+To set up a study from FEN, copy the FEN to the clipboard, press "Paste" in on the FEN text input above the board. If you browser does not support auto pasting, then delete everything from the text box, paste the FEN manually and then press "Paste" to initiate parsing.
+
+_Note that setting up the study form a FEN will delete all existing moves._
+
+## Merging moves into a study
+
+To merge moves, copy the moves in PGN format, or copy a full PGN to the clipboard, then in the "Tools" tab press "Paste" on the "Merge moves" text input. If you browser does not support auto pasting, then delete everything from the text box, paste the moves list / PGN manually and then press "Paste" to initiate parsing.
+
+Merging moves will keep all your existing moves, but overwrite the comments / nags / drawings / train weights with the merged ones if there is collision.
+
+## Compatiblity with lichess study
+
+Pgn Editor study is 100% compatible with a lichess study chapter.
+
+## Exporting study to lichess study chapter
+
+Go to the "Game" tab, press "Copy" on the PGN text input box. Then create a lichess study chapter from this PGN.
+
+## Importing lichess study chapter
+
+Download the lichess study chapter as PGN, open the file, copy the PGN to the clipboard, then follow the instructions in <a href="#setfrompgn">Setting up study from PGN</a>.
+
+<a name="repertoiretrainer"></a>
+
+# Repertoire trainer
+
+You can build a training repertoire by assigning training weights to moves. To do this, switch to the "Book" tab. There are two combo boxes for each moves. The first one is the weight with which you are required to make this move. The second one is the weight with which the trainer will play this move against you. Every move originally has both weights set to 0. Moves having weight 0 are ignored during training.
+
+To start the training, switch to the "Train" tab and select a training mode from the combo. In case you select 'Train white", the trainer will check your move with white and auto play moves for black, if you select "Train black", the trainer will check your move with black auto play moves for white.
+
+If you make a move that has less than the maximum weight, you will get warned, but you can continue playing. If you make a move with the maximum weight, you will never get warned. This way you can practice a diverse repertoire, but get some negative feedback, if you don't play the best possible move in a given position.
+
+To stop the training, set the combo in the "Train" tab to "Training off".
+
+Always turn off training when you want to edit your repertoire and turn it back on when you have made all your changes.
+
