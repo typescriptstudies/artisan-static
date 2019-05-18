@@ -138,3 +138,20 @@ By default training starts from the starting position of the study. If you want 
 If the train root position is deleted from the study, the starting position becomes the train root again.
 
 The train root is not remembered, you have to set it manually for every session.
+
+# Account
+
+## Anonymous login
+
+The application by default uses anonymous login. This means that you are automatically assinged a user ID simply by opening the application in your browser. The user ID is stored in your device's local storage, no cookie is used. This user ID is permanent as far as the local storage of your device is not cleared. If you use anonymous login, it is safest to write down your user ID on a piece of paper.
+
+You can always login with user user ID either on the same device if the local storage is cleared, or on any other device.
+
+## Login with lichess account
+
+You can also tie your login to your lichess identity. For this open the profile tab, type in your lichess username and press "Login". You will receive a verification code, that you have to temporarily insert into the introduction of your lichess profile. When ready, press "Verify". If the application finds the code in your profile, you will be granted your lichess username. You can always recover your account by repeating the verification process. This is the recommended login type.
+
+# Backup
+
+To back up your studies, copy the PGN text in the "Game" tab and save it in a text file. The study can be fully recovered by pasting this PGN into the "Game" tab.
+
