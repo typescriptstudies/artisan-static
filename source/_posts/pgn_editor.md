@@ -101,11 +101,27 @@ _Note that setting up the study form a FEN will delete all existing moves._
 
 To merge moves, copy the moves in PGN format, or copy a full PGN to the clipboard, then in the "Tools" tab press "Paste" on the "Merge moves" text input. If you browser does not support auto pasting, then delete everything from the text box, paste the moves list / PGN manually and then press "Paste" to initiate parsing.
 
-Merging moves will keep all your existing moves, but overwrite the comments / nags / drawings / train weights with the merged ones if there is collision.
+To merge moves manually, enter them in the text box, press "Copy", then "Paste".
+
+### Max plies
+
+You can limit the maximum number of plies to be merged using the "Max plies" combo. Lines longer than that will be trimmed.
+
+### Ignore comments
+
+To ignore comments coming from the merged PGN, check "Ignore comments". Ignoring comments will also ignore nags.
+
+### Ignore drawings
+
+To ignore drawings coming from the merged PGN, check "Ignore drawings".
+
+### Ignore train weights
+
+To ignore train weights coming from the merged PGN, check "Ignore train weights".
 
 ### Merging multiple PGNs
 
-You can merge multiple PGNs at once ( best if the PGNs are separated by two empty lines, but the parser is forgiving ). You can monitor which game is being processed in the "Merge moves" textbox. Yo can specify a ply limit up to which the PGNs should be merged in the "Max plies" combo. If there are a lot of PGNs, it is recommended that you use a low ply limit. Wait patiently, there is some delay between processing each game in order that the server and the client are not overloaded. Building a book from multiple PGNs is an expensive operation.
+You can merge multiple PGNs at once ( best if the PGNs are separated by two empty lines, but the parser is forgiving ). You can monitor which game is being processed in the "Merge moves" textbox. If there are a lot of PGNs, it is recommended that you use a low ply limit. Wait patiently, there is some delay between processing each game in order that the server and the client are not overloaded. Building a book from multiple PGNs is an expensive operation.
 
 ## Editing drawings
 
