@@ -41,8 +41,6 @@ Any board editing in Pgn Editor can only be interpreted in the context of a stud
 
 To create a new study, go the Studies tab, select a variant from the combo and press "Create new":
 
-![](/assets/screenshots/createstudy.PNG)
-
 You can choose a title by filling in the popup, however a default title is provided, so it is enough to press Ok.
 
 ## Selecting a study
@@ -52,6 +50,10 @@ There is always exactly one study selected, shown with a different background in
 ## Cloning a study
 
 To clone a study, click on the `Clone` button of the study.
+
+## Downloading a study
+
+To download a study, click on the `Download` button of the study.
 
 ## Deleting a study
 
@@ -83,6 +85,46 @@ Editing can be done using the controls above the board:
 
 <a name="setfrompgn"></a>
 
+## Editing drawings
+
+Drawings can be associated with each position. These are arrows and circles of various color and thickness and serve the purpose of graphically explaining ideas in the position.
+
+![](/assets/screenshots/draw.PNG) &nbsp;&nbsp;&nbsp;To start editing drawings, press the pencil button above the board. A drawing panel will open up, that lets you select shape, color, thickness and frame duration. When finished with drawing, press this button again. Note that in drawing mode drag and drop move input does not work.
+
+### Arrows
+
+To draw an arrow, select the arrow shape, click on the initial square and then on the target square.
+
+### Circles
+
+To draw a circle, select the circle shape and click on a square.
+
+### Frame duration
+
+You can enter a frame duration for every position. This is interpreted as milliseconds, and determines the period of time for which the position will be shown, when creating an animation.
+
+## Animations
+
+To create an animated GIF of successive positions, go to the "Tools" tab and press "Init GIF". Select a position on the board, then press "Add frame". Repeat this for every position in your animation. Then press "Render". This will open the animated GIF in a new window, from where you can download it.
+
+### Adding comments to animation
+
+To add comments to the animation, check the "Add comments to frame" checkbox.
+
+### Chaning the size of the animation
+
+Animation follows the what you see is what you get principle, so the board size will the actual size you see on the screen. If you need a smaller animation then choose a smaller maximum board size using the "Max board size" combo.
+
+## Position screenshot
+
+### GIF screenshot
+
+To create a GIF position screenshot, create an animation with a single frame.
+
+### PNG screenshot
+
+To create a PNG screenshot in the "Tools" tab click on "Export board screenshot". This will only export the board without comments. The screenshot is downloaded directly without opening it in a new window. This is the recommended way of creating a screenshot of a single position.
+
 ## Setting up study from PGN
 
 To set up a study from a PGN, copy the PGN to the clipboard, go to the "Game" tab and press "Paste". If you browser does not support auto pasting, then delete everything from the text box, paste the PGN manually and then press "Paste" to initiate parsing.
@@ -100,6 +142,10 @@ _Note that setting up the study form a FEN will delete all existing moves._
 To merge moves, copy the moves in PGN format, or copy a full PGN to the clipboard, then in the "Tools" tab press "Paste" on the "Merge moves" text input. If you browser does not support auto pasting, then delete everything from the text box, paste the moves list / PGN manually and then press "Paste" to initiate parsing.
 
 Merging moves will keep all your existing moves, but overwrite the comments / nags / drawings / train weights with the merged ones if there is collision.
+
+### Merging multiple PGNs
+
+You can merge multiple PGNs at once ( best if the PGNs are separated by two empty lines, but the parser is forgiving ). You can monitor which game is being processed in the "Merge moves" textbox. Yo can specify a ply limit up to which the PGNs should be merged in the "Max plies" combo. If there are a lot of PGNs, it is recommended that you use a low ply limit. Wait patiently, there is some delay between processing each game in order that the server and the client are not overloaded. Building a book from multiple PGNs is an expensive operation.
 
 ## Compatiblity with lichess study
 
@@ -151,7 +197,24 @@ You can always login with user user ID either on the same device if the local st
 
 You can also tie your login to your lichess identity. For this open the profile tab, type in your lichess username and press "Login". You will receive a verification code, that you have to temporarily insert into the introduction of your lichess profile. When ready, press "Verify". If the application finds the code in your profile, you will be granted your lichess username. You can always recover your account by repeating the verification process. This is the recommended login type.
 
-# Backup
+# Keyboard navigation
 
-To back up your studies, copy the PGN text in the "Game" tab and save it in a text file. The study can be fully recovered by pasting this PGN into the "Game" tab.
+For selecting a move in a given position use the Up and Down arrow keys. If you switch to the "Book" view, you can see which move is selected, but keyboard navigation works in any other view as well. To make the selected move use Arrow Right, to go back one move, press Arrow Left. You can go back to the starting position with Ctrl + Arrow Left and to the end of the line with Ctrl + Arrow Right. Move ordering can be affected by setting the training weights next to the move. Moves are ordered according to the first weight ( my weight ) and if this is equal, than according to the second weight ( opponent weight ).
 
+# Sharing your study
+
+## Import link
+
+In the "Tools" tab you find an "Import link". You can share this link. When this link is clicked by a third party user, your study will open and a copy of it will be added to the studies of the user opening it. If you click on your own import link, the study will open and become your selected study, but no new clone of the study will be added to your own studies.
+
+## Embed
+
+Copy the "Embed" tag in the "Tools" tab into your web page. This will have the same effect as import link, but open the study in a HTML Iframe.
+
+# Search games of a user
+
+To search games of a user having the moves of the current line and the variant of the study go to the "Tools" tab and type in the lichess user name into "Search username" ( case insensitive ). Board flip matters, when the board is flipped black games of the user will be searched. To initiate the search, press "Search games of user with current moves".
+
+# Current line
+
+To copy the current line in PGN notation, go to the "Tools" tab and press "Copy" on "Line".

@@ -43,6 +43,7 @@ if(hideheader){
     for(let node of document.querySelectorAll(".hide")){
         node.style.display = "none"
     }
+    document.querySelector("article").style.marginTop = "-20px"
 }
 
 let dochtml= document.documentElement.innerHTML
