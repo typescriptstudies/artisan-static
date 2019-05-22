@@ -85,46 +85,6 @@ Editing can be done using the controls above the board:
 
 <a name="setfrompgn"></a>
 
-## Editing drawings
-
-Drawings can be associated with each position. These are arrows and circles of various color and thickness and serve the purpose of graphically explaining ideas in the position.
-
-![](/assets/screenshots/draw.PNG) &nbsp;&nbsp;&nbsp;To start editing drawings, press the pencil button above the board. A drawing panel will open up, that lets you select shape, color, thickness and frame duration. When finished with drawing, press this button again. Note that in drawing mode drag and drop move input does not work.
-
-### Arrows
-
-To draw an arrow, select the arrow shape, click on the initial square and then on the target square.
-
-### Circles
-
-To draw a circle, select the circle shape and click on a square.
-
-### Frame duration
-
-You can enter a frame duration for every position. This is interpreted as milliseconds, and determines the period of time for which the position will be shown, when creating an animation.
-
-## Animations
-
-To create an animated GIF of successive positions, go to the "Tools" tab and press "Init GIF". Select a position on the board, then press "Add frame". Repeat this for every position in your animation. Then press "Render". This will open the animated GIF in a new window, from where you can download it.
-
-### Adding comments to animation
-
-To add comments to the animation, check the "Add comments to frame" checkbox.
-
-### Chaning the size of the animation
-
-Animation follows the what you see is what you get principle, so the board size will the actual size you see on the screen. If you need a smaller animation then choose a smaller maximum board size using the "Max board size" combo.
-
-## Position screenshot
-
-### GIF screenshot
-
-To create a GIF position screenshot, create an animation with a single frame.
-
-### PNG screenshot
-
-To create a PNG screenshot in the "Tools" tab click on "Export board screenshot". This will only export the board without comments. The screenshot is downloaded directly without opening it in a new window. This is the recommended way of creating a screenshot of a single position.
-
 ## Setting up study from PGN
 
 To set up a study from a PGN, copy the PGN to the clipboard, go to the "Game" tab and press "Paste". If you browser does not support auto pasting, then delete everything from the text box, paste the PGN manually and then press "Paste" to initiate parsing.
@@ -147,7 +107,47 @@ Merging moves will keep all your existing moves, but overwrite the comments / na
 
 You can merge multiple PGNs at once ( best if the PGNs are separated by two empty lines, but the parser is forgiving ). You can monitor which game is being processed in the "Merge moves" textbox. Yo can specify a ply limit up to which the PGNs should be merged in the "Max plies" combo. If there are a lot of PGNs, it is recommended that you use a low ply limit. Wait patiently, there is some delay between processing each game in order that the server and the client are not overloaded. Building a book from multiple PGNs is an expensive operation.
 
-## Compatiblity with lichess study
+## Editing drawings
+
+Drawings can be associated with each position. These are arrows and circles of various color and thickness and serve the purpose of graphically explaining ideas in the position.
+
+![](/assets/screenshots/draw.PNG) &nbsp;&nbsp;&nbsp;To start editing drawings, press the pencil button above the board. A drawing panel will open up, that lets you select shape, color, thickness and frame duration. When finished with drawing, press this button again. Note that in drawing mode drag and drop move input does not work.
+
+### Arrows
+
+To draw an arrow, select the arrow shape, click on the initial square and then on the target square.
+
+### Circles
+
+To draw a circle, select the circle shape and click on a square.
+
+### Frame duration
+
+You can enter a frame duration for every position. This is interpreted as milliseconds, and determines the period of time for which the position will be shown, when creating an animation.
+
+# Creating animations
+
+To create an animated GIF of successive positions, go to the "Tools" tab and press "Init GIF". Select a position on the board, then press "Add frame". Repeat this for every position in your animation. Then press "Render". This will open the animated GIF in a new window, from where you can download it.
+
+## Adding comments to animation
+
+To add comments to the animation, check the "Add comments to frame" checkbox.
+
+## Changing the size of the animation
+
+Animation size follows the what you see is what you get principle, so the animation board size will be the actual board size you see on the screen. If you need a smaller animation board size then choose a smaller maximum board size using the "Max board size" combo.
+
+# Position screenshot
+
+## GIF screenshot
+
+To create a GIF position screenshot, create an animation with a single frame.
+
+## PNG screenshot
+
+To create a PNG screenshot in the "Tools" tab click on "Export board screenshot". This will only export the board without comments. The screenshot is downloaded directly without opening it in a new window. This is the recommended way of creating a screenshot of a single position.
+
+# Compatiblity with lichess study
 
 Pgn Editor study is 100% compatible with a lichess study chapter.
 
