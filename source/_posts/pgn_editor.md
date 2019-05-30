@@ -175,11 +175,23 @@ Go to the "Game" tab, press "Copy" on the PGN text input box. Then create a lich
 
 Download the lichess study chapter as PGN, open the file, copy the PGN to the clipboard, then follow the instructions in <a href="#setfrompgn">Setting up study from PGN</a>.
 
+# Book view
+
+To view all the moves played in a given position, switch to the "Book" tab. To make a move, click on its SAN notation.
+
+## Transpositions
+
+If there are traospositions available, which reach the same position by different mover order, these will be shown above the move list. Clicking on them will take you to the given tranposition. Note that in this case you switch to a different line.
+
+## Train weights and success measures
+
+For every move two train weights can be set. Also a success measure may be shown for the entire node, above the move list, or the individual moves. For the interpretation of these, read on to "Repertoire trainer".
+
 <a name="repertoiretrainer"></a>
 
 # Repertoire trainer
 
-You can build a training repertoire by assigning training weights to moves. To do this, switch to the "Book" tab. There are two combo boxes for each moves. The first one is the weight with which you are required to make this move. The second one is the weight with which the trainer will play this move against you. Every move originally has both weights set to 0. Moves having weight 0 are ignored during training.
+You can build a training repertoire by assigning training weights to moves. To do this, switch to the "Book" tab. There are two combo boxes for each moves. The first one is the weight with which you are required to make this move ( "me weight" ). The second one is the weight with which the trainer will play this move against you ( "opp weight" ). Every move originally has both weights set to 0. Moves having weight 0 are ignored during training.
 
 ## Start training
 
@@ -200,6 +212,28 @@ By default training starts from the starting position of the study. If you want 
 If the train root position is deleted from the study, the starting position becomes the train root again.
 
 The train root is not remembered, you have to set it manually for every session.
+
+## Success measures and train by error percentage
+
+The success measure of solving a given node is shown above the move list in the Book view, if any move has a non zero me weight.
+
+The success measures of the moves may be shown right to the moves, if following them leads to further training positions. The lower this measure is, the higher the chance that this move gets played in training against you when training by error.
+
+If the "Train by error" percentage in the Train view is set to 0, then success measures will be ignored and moves are selected only based on train weights. If it is set to 100, then only success measures count in selecting moves. Any other value is an appropriate combination of the two. The default value is 50.
+
+## Training transpositions
+
+If the trainer encounters a leaf node, and there is a transposition available to a branching node, then it will switch to the branching node with the most number of child moves.
+
+# Opening explorer of top atomic players
+
+To view opening books of some selected top atomic players, switch to the "Players" tab. It is best to do this within an atomic study, because otherwise the book moves may prove to be illegal.
+
+The book files are relatively large, so after selecting a player from the combo, you have to request downloading the book explicitly by pressing the "Load book" button. Once the book is loaded, it is cached for the session.
+
+The books are built based on recent rated atomic games against human opponent, at least 10 plies in length, where both players were rated >= 2200. The books have a maximal depth of 30 plies.
+
+The books are managed, as new games come in, they get updated.
 
 # Account
 
