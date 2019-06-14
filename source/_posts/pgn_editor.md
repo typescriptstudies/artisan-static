@@ -225,6 +225,36 @@ If the "Train by error" percentage in the Train view is set to 0, then success m
 
 If the trainer encounters a leaf node, and there is a transposition available to a branching node, then it will switch to the branching node with the most number of child moves.
 
+<a name="analysis"></a>
+
+# Analysis
+
+To view engine analysis of the current position, switch to the "Analysis" sub tab of the "Analysis" tab.
+
+By default performing analysis is an admin only feature. However the system administrator may lift this restriction. Whether you are allowed to an analyze or not, you can find out by the method of trial and error. However even when analysis is enabled for ordinary users, issuing raw engine commands and creating new engine instances using the "Raw" sub tab is still disabled. For all practical purposes ordinary users should use the "Analysis" sub tab within the "Analysis" tab, the "Raw" sub tab serving development purposes.
+
+Analysis uses $[multi variant Stockfish](https://github.com/ddugovic/Stockfish) .
+
+The engine runs in the cloud. There is only one engine instance. Analysis results are automatically stored in the cloud. However stored analysis is only overwritten, if incoming new analysis has at least the same multipv level, and has a strictly higher depth, than stored analysis. So you cannot overwrite depth 20, multipv 10 analysis with depth 30 multipv 5 analysis. In case of cuncurrency, a new analysis request will have precedence over an ongoing analysis. The client needs not be open during analysis. You can start an analyis, turn off your computer and then come back later to see the results ( there is no guarantee that your analysis won't be interrupted at some point by an other user, however even in the latter case you will have the analysis results stored up to this interrupt, provided that they were eligible for storing ).
+
+## Start analysis
+
+To start engine analyis, press the "Analyze" button in the "Analysis" sub tab of the "Analysis" tab. Wait patiently while the first results come in.
+
+## Stop analysis
+
+To start engine analyis, press the "Stop" button in the "Analysis" sub tab of the "Analysis" tab.
+
+## Set multipv level
+
+To set multipv level, select the level from the "MultiPV" combo in the "Analyis" sub tab of the "Analysis" tab. This will only take effect when you start a new analysis.
+
+## Pinning analysis to a position
+
+If you start analyzing by pressing the "Analyze" button, your client is considered to be switched to analysis mode. This means that when you change position, the engine stops analyzing the previous position and starts analyzing the new one automatically.
+
+If you want to pin the analysis to a position, while using other features (e.g. the trainer), then reload the page. This does the trick, because every freshly loaded client has analysis mode set to off by default, but reloading the client won't stop the analysis going on at the server.
+
 # Opening explorer of top atomic players
 
 To view opening books of some selected top atomic players, switch to the "Players" tab. It is best to do this within an atomic study, because otherwise the book moves may prove to be illegal.
