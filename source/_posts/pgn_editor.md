@@ -243,7 +243,7 @@ To start engine analyis, press the "Analyze" button in the "Analysis" sub tab of
 
 ## Stop analysis
 
-To start engine analyis, press the "Stop" button in the "Analysis" sub tab of the "Analysis" tab.
+To stop engine analyis, press the "Stop" button in the "Analysis" sub tab of the "Analysis" tab.
 
 ## Set multipv level
 
